@@ -1,18 +1,17 @@
 package org.example;
 
-import org.example.decorator.Beverage;
-import org.example.decorator.Espresso;
-import org.example.decorator.HouseBlend;
-import org.example.decorator.Mocha;
+import org.example.command.Light;
+import org.example.command.LightOnCommand;
+import org.example.command.SimpleRemoteControl;
+
+
 
 public class Main {
     public static void main(String[] args) {
-        Beverage beverage = new Espresso();
-
-        System.out.println(beverage.getDescription() + " $" + beverage.cost());
-
-        Beverage beverage2 = new HouseBlend();
-        beverage2 = new Mocha(beverage2);
-        System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
+        SimpleRemoteControl remote = new SimpleRemoteControl();
+        Light light = new Light();
+        LightOnCommand lightOn = new LightOnCommand(light);
+        remote.setCommand(lightOn);
+        System.out.println(remote.buttonWasPressed());
     }
 }
