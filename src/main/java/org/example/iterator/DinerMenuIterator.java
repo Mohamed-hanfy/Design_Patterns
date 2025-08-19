@@ -1,4 +1,5 @@
 package org.example.iterator;
+import java.util.Iterator;
 
 public class DinerMenuIterator implements Iterator {
 
@@ -21,5 +22,9 @@ public class DinerMenuIterator implements Iterator {
         } else {
             return true;
         }
+    }
+
+    public void remove(){
+        throw new UnsupportedOperationException("remove is not supported");
     }
 }
