@@ -1,25 +1,23 @@
 package org.example.iterator;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Waitress {
-    Menu pancakeHouseMenu;
-    Menu dinerMenu;
+    ArrayList<Menu> menus;
 
-    public Waitress(Menu pancakeHouseMenu,Menu dinerMenu){
-        this.pancakeHouseMenu = pancakeHouseMenu;
-        this.dinerMenu = dinerMenu;
+    public Waitress(ArrayList<Menu> menus){
+        this.menus = menus;
     }
 
     public void printMenu(){
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerIterator = dinerMenu.createIterator();
+        Iterator menuIterator = menus.iterator();
 
-        System.out.println("MENU\n----\nBREAKFAST");
-        printMenu(pancakeIterator);
-        System.out.println("\nLUNCH");
-        printMenu(dinerIterator);
+        while(menuIterator.hasNext()){
+            Menu menu =(Menu) menuIterator.next();
+            printMenu(menu.createIterator());
+        }
     }
     private void printMenu(Iterator iterator){
         while(iterator.hasNext()){
