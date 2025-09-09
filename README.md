@@ -1,6 +1,7 @@
 # Design_Patterns
 
-A curated set of classic GoF design pattern implementations in Java. Each package demonstrates one pattern with minimal, focused examples you can run from the command line.
+A curated set of classic GoF design pattern implementations in Java, inspired by the **Head First Design Patterns** book.  
+Each package demonstrates one pattern with minimal, focused examples you can run from the command line.
 
 ### Highlights
 - Covers Adapter, Command, Composite, Decorator, Iterator, Observer, Proxy, Singleton, State, Strategy, and Template Method
@@ -23,77 +24,6 @@ src/main/java/org/example/
   strategy/           # Duck behaviors (fly/quack strategies)
   template/           # Caffeine beverage template method
   Main.java           # Simple entry point that may run selected demos
-```
-
-Key demo entry points you can run directly:
-- `org.example.Main`
-- `org.example.state.GumballMachineSimulation`
-- `org.example.proxy.GumballMachineSimulationII`
-
-## Prerequisites
-
-- Java 23 (JDK 23)
-- Maven 3.9+
-
-Verify versions:
-```bash
-java -version
-mvn -v
-```
-
-## Build
-
-```bash
-mvn clean compile
-```
-
-If you prefer a JAR (without a predefined main-class):
-```bash
-mvn -q -DskipTests package
-```
-
-## Run
-
-This project does not declare an exec plugin or manifest main-class, so run classes via the compiled output in `target/classes`.
-
-Windows PowerShell examples:
-
-```bash
-# 1) Run the default example (if implemented)
-mvn -q compile
-java -cp target/classes org.example.Main
-
-# 2) Run State pattern simulation
-java -cp target/classes org.example.state.GumballMachineSimulation
-
-# 3) Run Proxy pattern simulation
-java -cp target/classes org.example.proxy.GumballMachineSimulationII
-```
-
-If you want to use `mvn exec:java`, add the exec plugin and specify the `mainClass`. Example plugin snippet for `pom.xml`:
-
-```xml
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>exec-maven-plugin</artifactId>
-      <version>3.3.0</version>
-      <configuration>
-        <mainClass>org.example.Main</mainClass>
-      </configuration>
-    </plugin>
-  </plugins>
-  <!-- keep other build settings here -->
-  <!-- note: not currently included in this repo's pom.xml -->
-  
-</build>
-```
-
-Then you could run:
-```bash
-mvn -q compile exec:java
-```
 
 ## Pattern Summaries
 
