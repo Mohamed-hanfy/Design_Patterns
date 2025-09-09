@@ -1,7 +1,7 @@
 # Design_Patterns
 
 A curated set of classic GoF design pattern implementations in Java, inspired by the **Head First Design Patterns** book.  
-Each package demonstrates one pattern with minimal, focused examples you can run from the command  line.
+Each package demonstrates one pattern with minimal, focused examples you can run from the command line.
 
 ### Highlights
 - Covers Adapter, Command, Composite, Decorator, Iterator, Observer, Proxy, Singleton, State, Strategy, and Template Method
@@ -24,6 +24,7 @@ src/main/java/org/example/
   strategy/           # Duck behaviors (fly/quack strategies)
   template/           # Caffeine beverage template method
   Main.java           # Simple entry point that may run selected demos
+```
 
 ## Pattern Summaries
 
@@ -51,8 +52,3 @@ src/main/java/org/example/
 - Create additional commands/devices in `command` and wire them in `RemoteControl`.
 - Implement a new `FlyBehavior` or `QuacBehavior` in `strategy` and inject them into `Duc`.
 - Add composite levels or leaf types in `composite` and print using `Waitress`.
-
-## Notes
-
-- The Java package/class names are intentionally simple and educational.
-- Some names are kept close to Head First Design Patterns style for familiarity.
