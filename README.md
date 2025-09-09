@@ -1,7 +1,7 @@
 # Design_Patterns
 
 A curated set of classic GoF design pattern implementations in Java, inspired by the **Head First Design Patterns** book.  
-Each package demonstrates one pattern with minimal, focused examples you can run from the command line.
+Each package demonstrates one pattern with minimal, focused examples you can run from the command  line.
 
 ### Highlights
 - Covers Adapter, Command, Composite, Decorator, Iterator, Observer, Proxy, Singleton, State, Strategy, and Template Method
